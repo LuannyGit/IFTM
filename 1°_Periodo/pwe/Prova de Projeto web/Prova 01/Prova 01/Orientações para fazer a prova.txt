@@ -1,0 +1,17 @@
+PROVA DE PROJETO WEBSITE ESTÁTICO
+
+- Valor: 4,0 pontos
+- Prova individual
+- Objetivo: construir a mesma página web mostrada nesse vídeo: https://youtu.be/WHpgkUCLbgs
+
+Únicos momentos que você poderá acessar a Web/Internet durante a avaliação:
+- Para assistir o vídeo do Youtube acima
+- Para acessar o seu GitHub para hospedar a solução da sua página
+- Para acessar esse formulário (https://forms.gle/9zzAxfxnmwWruVjAA) para entregar a solução da sua prova
+
+Observações:
+1) Ao terminar a sua prova chame o professor para apresentá-la a ele.
+2) Apenas os seus códigos-fontes locais poderão ser consultados
+3) É proibida a comunicação com qualquer outra pessoa durante o período de realização da prova.
+
+Outras orientações sobre a realização da prova serão repassadas pelo professor no início da prova.
