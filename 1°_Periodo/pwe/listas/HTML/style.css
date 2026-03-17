@@ -1,0 +1,89 @@
+#caixa{
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+
+#retangulo {
+width: 100%;
+height: 150px;
+border-radius: 0 0 30px 30px;
+background-color: rgb(192, 166, 129);
+position: relative;
+margin-top: 0;
+padding-top: 0;
+}
+
+#nome {
+font-family: 'Times New Roman', Times, serif;
+padding: 20px 30px 0px 20px;
+font-size: 30px;
+}
+
+
+
+#nome2 {
+font-family: fantasy;
+padding: 0px 5px 15px 15px;
+margin: 0;
+font-size: 50px;
+margin-top: -20px;
+}
+
+
+#imagens {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid white;
+
+/* onde a magica acontece kkk */
+position: absolute;
+top: 30px;
+right: 100px;
+}
+
+#retangulo_resumo {
+width: 35%;
+height: 100%;
+border-radius: 30px 30px 30px 30px;
+background-color: rgb(192, 166, 129);
+position: relative;
+margin-top: 0;
+padding-top: 0;
+}
+
+.ps {
+padding: 10px 20px 0px 20px;
+}
+
+.hobbies {
+padding: 5px 5px 10px 40px;
+}
+
+#formacao {
+width: 55%;
+margin-top: 80px;
+margin-top: -50px;
+padding: 80px 0px 0 5px;
+padding-right: 78px;
+text-align: justify;
+}
+
+#qualidades{
+    border-radius: 0;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+#idiomas {
+    margin-top: 80px;
+    margin-top: -50px;
+    padding: 40px 0 0 20px;
+    padding-right: 78px;
+}
