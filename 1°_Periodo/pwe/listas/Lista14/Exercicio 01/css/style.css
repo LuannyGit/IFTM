@@ -1,0 +1,18 @@
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 4px;
+    border-bottom: 2px solid red;
+    color: darkgreen;
+}
+
+p {
+    background-color: lightgray;
+    font-size: 18px;
+    color: green;
+    line-height: 2em;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
