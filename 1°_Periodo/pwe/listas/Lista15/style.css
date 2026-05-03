@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    border: 1px solid black;
+    display: flex;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: stretch;
+    background-color: rgb(5, 12, 5);
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+}
+
+ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px 15px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center 12px;
+    background-size: 30px;
+    border-bottom: 5px solid black;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+#facebook {
+    background-image: url('imagens/faceBlack.png');
+}
+#facebook:hover {
+    background-image: url('imagens/face.png');
+    border-bottom-color: blue;
+    color: blue;
+}
+
+#instagram {
+    background-image: url('imagens/instaBlack.png');
+}
+#instagram:hover {
+    background-image: url('imagens/insta.png');
+    border-bottom-color: purple;
+    color: purple;
+}
+
+#maps {
+    background-image: url('imagens/mapsBlack.png');
+}
+#maps:hover {
+    background-image: url('imagens/maps.png');
+    border-bottom-color: green;
+    color: green;
+}
+
+#twitter {
+    background-image: url('imagens/twitterBlack.png');
+}
+#twitter:hover {
+    background-image: url('imagens/twitter.png');
+    border-bottom-color: rgb(206, 197, 68);
+    color: yellow;
+}
+
+#youtube {
+    background-image: url('imagens/youtubeBlack.png');
+}
+#youtube:hover {
+    background-image: url('imagens/youtube.png');
+    border-bottom-color: red;
+    color: red;
+}
