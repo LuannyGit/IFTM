@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li{
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    background-color: rgb(255, 94, 0);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    color: rgb(255, 94, 0);
+    background-color: white;
+}
+
+header > div{
+    background-color: blue;
+}
+
+#azul > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 94, 0);
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    width: 1250px;
+    margin: auto;
+    background-color: white;
+    padding: 30px 0px;
+    text-align: justify;
+}
+
+#azul {
+    background-color: darkblue;
+    padding: 30px;
+}
+
+#azul > div > p{
+    color: red;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.logo-mobile{
+    display: none;
+}
+
+#tela {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1200px;
+    margin: auto;
+    gap: 20px;
+    text-align: center;
+}
+
+.celulares > p{
+    text-align: justify;
+}
+
+.celulares > details{
+    text-align: justify;
+}
+
+.celulares > details > summary:active {
+    background-color: rgba(127, 127, 216, 0.634);
+}
+
+.celulares:has(details[open]) ~ .celulares img {
+    padding-top: 200px;
+}
+
+
+.celulares > details > summary{
+    color: red;
+    text-align: left;
+    display: flex;
+    font-weight: bold;
+}
+
+
+footer{
+    background-color: rgb(255, 94, 0);
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    ul {
+        flex-direction: row;
+        
+    }
+
+    ul li {
+        text-align: center;
+    }
+
+    a {
+        padding: 24px 25px;
+
+    }
+
+    #azul {
+        padding: 15px;
+    }
+
+    #azul > div {
+        width: 100%;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    #azul > div > h1 {
+        font-size: 25px;
+    }
+
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #tela {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .celulares img {
+        border-radius: 8px;
+    }
+
+    .textos{
+        width: 0px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 40px 15px;
+        text-align: center;
+    }
+}
