@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+}
+
+header > nav {
+    background-color: darkblue;
+    padding: 20px;
+}
+
+nav > ul li {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+header > nav > ul li:hover > a:hover {
+    text-decoration: underline;
+}
+
+header > img {
+    width: 100%;
+}
+
+section:nth-of-type(odd){
+    background-color: rgb(160, 160, 160);
+}
+
+section:nth-of-type(even){
+    background-color: white;
+}
+
+body {
+    background-color: black;
+}
+
+section {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: justify;
+
+}
+
+.containe {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: justify;
+
+}
+
+.container > input{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid black;
+
+}
+.container > h1 {
+    text-align: left;
+}
+
+.container > input:hover{
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+.images > img {
+    width: 40px;
+}
+.caixas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button2 {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.button2:hover{
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+.caixas > img {
+    width: 100%;
+}
+
+#termos {
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid blue;
+    
+}
+
+#termos:hover {
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+.ultima-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.ima > img {
+    width: 100%;
+}
+
+footer {
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    header > nav > ul{
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    section {
+    width: 1200px;
+    margin: auto;
+
+    }
+
+    .containe  {
+        flex-direction: row;
+    }
+
+    .containe > .caixas {
+        gap: 20px;
+        padding: 30px;
+    }
+    .caixas > img {
+        width: 450px;
+    }
+
+    .ultima-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .texto {
+        flex: 2;
+    }
+
+    .ima {
+        flex: 1;
+    }
+
+    .ima img {
+        width: 100%;
+    }
+}
