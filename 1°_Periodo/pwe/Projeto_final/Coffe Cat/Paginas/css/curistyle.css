@@ -1,0 +1,547 @@
+/* ==========================================================================
+IMPORTS E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#ibarra-real-nova {
+    font-family: "Cinzel Decorative", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-slab {
+    font-family: "Allura", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section:nth-of-type(even) {
+    background-color: #FFF8F0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #ae7849;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 15px;
+}
+
+
+/* ==========================================================================
+HEADER
+   ========================================================================== */
+header {
+    background-color: #4B2E2B;
+    color: white;
+}
+
+.header-container {
+    flex-wrap: wrap;
+    padding: 20px 15px 10px 15px;
+}
+
+.catalago {
+    text-align: left;
+    flex: 1;
+}
+
+.catalago h1 {
+    font-size: 1.7rem;
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.menu-lateral {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #8c5b3c92;
+    padding: 8px 23px;
+    margin-top: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+}
+
+.fechar-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #4B2E2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease;
+}
+
+.menu-celular {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    display: block;
+}
+
+#menu-toggle:checked~.nav-menu {
+    left: 0;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.nav-menu ul li {
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.9rem;
+    padding: 12px 20px;
+    display: block;
+}
+
+.nav-menu ul li:active {
+    background-color: #8C5A3C;
+}
+
+
+/* ==========================================================================
+MAIN
+   ========================================================================== */
+
+.curiosidades {
+    padding: 60px 20px;
+}
+
+.titulo-secao {
+    font-family: "Cinzel Decorative", serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #4B2E2B;
+    margin-bottom: 40px;
+}
+
+.curiosidade {
+    background-color: #FFF8F0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    transition: transform .3s ease;
+}
+
+.curiosidade:hover {
+    transform: translateY(-6px);
+}
+
+.curiosidade img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.curiosidade:hover img {
+    transform: scale(1.05);
+}
+
+.curiosidade h3 {
+    font-family: "Cinzel Decorative", serif;
+    color: #4B2E2B;
+    font-size: 1.1rem;
+    padding: 15px 15px 5px;
+}
+
+.curiosidade p {
+    padding: 0 15px 20px;
+    color: #5A3A2E;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.grid-anatomia,
+.grid-comportamento,
+.grid-historia,
+.grid-ciencia {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.grid-ciencia > .curiosidade {
+    border-radius: 50% 50% 0 0;
+
+}
+/* ==========================================================================
+FOOTER
+   ========================================================================== */
+footer {
+    background-color: #4B2E2B;
+    color: #FFF8F0;
+    padding: 40px 20px;
+    font-family: "Roboto Slab", serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #C08552;
+}
+
+.footer-primeira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-img {
+    max-width: 140px;
+    height: auto;
+}
+
+.footer-info p {
+    font-size: 0.90rem;
+    margin-bottom: 10px;
+    color: #FFF8F0;
+}
+
+.footer-info {
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #C08552;
+}
+
+.footer-img-bottom {
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.social-icons{
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+DESKTOP (min-width: 768px)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 15px;
+    }
+
+    .catalago {
+        flex: none;
+    }
+
+    #logo {
+        width: 150px;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        background-color: #8C5A3C;
+        padding: 0;
+        margin-top: 0;
+        border-radius: 0;
+        height: 50px;
+    }
+
+    .menu-icon,
+    .fechar-icon {
+        display: none;
+    }
+
+    .menu-celular {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        max-width: none;
+        height: 100%;
+    }
+
+    .nav-menu ul li {
+        display: flex;
+        align-items: stretch;
+        transition: background-color 0.3s ease;
+        justify-content: center;
+    }
+
+    .nav-menu ul li a {
+        display: flex;
+        align-items: center;
+        padding: 0 60px;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #6c4540d6;
+    }
+
+    .container-caixas {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+.curiosidade {
+        display: flex;
+        flex-direction: column;
+        height: 100%; 
+        overflow: hidden;
+    }
+
+    /* Faz a imagem esticar e ocupar o espaço restante perfeitamente */
+    .curiosidade img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex-grow: 1;
+        min-height: 0; /* permite a imagem encolher e abrir espaço pro texto */
+        display: block;
+    }
+
+    /* Mantém os textos fixos embaixo da imagem sem sumir ou amassar */
+    .curiosidade h3,
+    .curiosidade p {
+        flex-shrink: 0;
+    }
+
+    .grid-anatomia {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+        gap: 20px;
+    }
+
+    .grid-anatomia .curiosidade:nth-child(1) {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .grid-anatomia .curiosidade:nth-child(4),
+    .grid-anatomia .curiosidade:nth-child(2) {
+        grid-row: span 2;
+    
+    }
+
+    .grid-anatomia .curiosidade:nth-child(6) {
+        grid-row: span 2;
+    }
+
+    .grid-anatomia .curiosidade:nth-child(8) {
+        grid-column: span 2;
+    }
+
+
+    .grid-historia {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+        gap: 20px;
+    }
+
+    .grid-historia .curiosidade:nth-child(4),
+    .grid-historia .curiosidade:nth-child(3) {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .grid-historia .curiosidade:nth-child(2) {
+        grid-row: span 2;
+    }
+
+    .grid-historia .curiosidade:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .grid-comportamento {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .grid-comportamento .curiosidade {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "img titulo"
+            "img texto";
+        min-height: 230px;
+    }
+
+    .grid-comportamento .curiosidade img {
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .grid-comportamento .curiosidade h3 {
+        grid-area: titulo;
+        align-self: end;
+        padding: 15px 15px 5px;
+    }
+
+    .grid-comportamento .curiosidade p {
+        grid-area: texto;
+        padding: 0 15px 15px;
+    }
+
+
+    .grid-ciencia {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .grid-ciencia .curiosidade img {
+        height: 350px;
+        flex-grow: 0;
+        border-radius: 50% 50% 0 0;
+    }
+
+    /* Rodapé */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-primeira {
+        text-align: center;
+        flex: 1;
+    }
+
+    .footer-info {
+        text-align: left;
+        flex: 1;
+        padding-left: 40px;
+    }
+
+    .footer-links {
+        text-align: left;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 40px;
+    }
+}

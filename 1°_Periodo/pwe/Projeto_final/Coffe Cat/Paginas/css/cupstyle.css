@@ -1,0 +1,634 @@
+/* ==========================================================================
+IMPORTS E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Petemoss&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#ibarra-real-nova {
+    font-family: "Cinzel Decorative", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-slab {
+    font-family: "Allura", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section:nth-of-type(even) {
+    background-color: #FFF8F0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #ae7849;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 15px;
+}
+
+
+/* ==========================================================================
+HEADER
+   ========================================================================== */
+header {
+    background-color: #4B2E2B;
+    color: white;
+}
+
+.header-container {
+    flex-wrap: wrap;
+    padding: 20px 15px 10px 15px;
+}
+
+.catalago {
+    text-align: left;
+    flex: 1;
+}
+
+.catalago h1 {
+    font-size: 1.7rem;
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.menu-lateral {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #8c5b3c92;
+    padding: 8px 23px;
+    margin-top: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+}
+
+.fechar-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #4B2E2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease;
+}
+
+.menu-celular {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    display: block;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+    left: 0;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.nav-menu ul li {
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.9rem;
+    padding: 12px 20px;
+    display: block;
+}
+
+.nav-menu ul li:active {
+    background-color: #8C5A3C;
+}
+
+
+/* ==========================================================================
+MAIN
+   ========================================================================== */
+
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    align-items: center;
+}
+
+#banner > img {
+    border-radius: 100%;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#banner > img:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);;
+}
+
+#banner h1 {
+    font-family: "Cinzel Decorative", serif;
+    color: #4B2E2B;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+#texto-banner {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #5a3a2e;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: justify;
+}
+
+#texto-banner strong {
+    color: #4B2E2B;
+    font-weight: 700;
+}
+
+.lista-cupcats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.card-cupcat {
+    background-color: #bf66002c;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.titulo-secao {
+    font-family: "Cinzel Decorative", serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #4B2E2B;
+    margin-bottom: 30px;
+    padding: 40px 20px 10px 20px; 
+}
+
+.card-cupcat summary {
+    list-style: none;
+}
+
+
+.card-cupcat summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.card-cupcat summary img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+}
+
+.card-cupcat summary h3 {
+    font-family: "Cinzel Decorative", serif;
+    color: #4B2E2B;
+    font-size: 1rem;
+    flex: 1;
+}
+
+/* seta customizada */
+.card-cupcat summary::after {
+    content: "▼";
+    color: #C08552;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* gira a seta quando aberto */
+.card-cupcat[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.card-detalhes {
+    padding: 0 16px 20px 16px;
+}
+
+.frase-tematica {
+    font-family: "Allura", serif;
+    font-size: 1.6rem;
+    color: #7f4819;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.card-detalhes ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.card-detalhes ul li {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.85rem;
+    color: #5a3a2e;
+    padding: 4px 0;
+    border-bottom: 1px dashed #C0855250;
+}
+
+.preco {
+    font-family: "Cinzel Decorative", serif;
+    color: #4B2E2B;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.card-embalagem {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    gap: 16px;
+    background-color: #FFF8F0;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-embalagem:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.2);
+}
+
+.card-embalagem img {
+    width: 100%;             
+    height: 320px;          
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;  
+    flex-shrink: 0;
+}
+
+.embalagem-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px 20px 16px;  
+    text-align: center;         
+}
+
+.embalagem-info h3 {
+    font-family: "Cinzel Decorative", serif;
+    color: #4B2E2B;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.embalagem-info p {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.88rem;
+    color: #5a3a2e;
+    line-height: 1.6;
+}
+
+.bloco-encomenda {
+    /* margin: 20px 60px; */
+    padding: 50px 14px;
+    color: #FFF8F0;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#cor{
+    background-color: #563532;
+}
+
+
+.bloco-encomenda h3 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #C08552;
+}
+
+.bloco-encomenda p {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.bloco-encomenda ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bloco-encomenda ul li {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8rem;
+    color: #FFF8F0;
+    border-bottom: 1px dashed #C0855260;
+    padding-bottom: 10px;
+}
+
+.botao-encomenda {
+    display: inline-block;
+    background-color: #C08552;
+    color: #FFF8F0;
+    text-decoration: none;
+    padding: 14px 30px;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 0.85rem;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-encomenda:hover {
+    background-color: #FFF8F0;
+    color: #4B2E2B;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+FOOTER
+   ========================================================================== */
+footer {
+    background-color: #4B2E2B;
+    color: #FFF8F0;
+    padding: 40px 20px;
+    font-family: "Roboto Slab", serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container h1 {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #C08552;
+}
+
+.footer-primeira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-img {
+    max-width: 140px;
+    height: auto;
+}
+
+.footer-info p {
+    font-size: 0.90rem;
+    margin-bottom: 10px;
+    color: #FFF8F0;
+}
+
+.footer-info {
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #C08552;
+}
+
+.footer-img-bottom {
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.social-icons{
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+DESKTOP (min-width: 768px)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 15px;
+    }
+
+    .catalago {
+        flex: none;
+    }
+
+    #logo {
+        width: 150px;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        background-color: #8C5A3C;
+        padding: 0;
+        margin-top: 0;
+        border-radius: 0;
+        height: 50px;
+    }
+
+    .menu-icon,
+    .fechar-icon {
+        display: none;
+    }
+
+    .menu-celular {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        max-width: none;
+        height: 100%;
+    }
+
+    .nav-menu ul li {
+        display: flex;
+        align-items: stretch;
+        transition: background-color 0.3s ease;
+        justify-content: center;
+    }
+
+    .nav-menu ul li a {
+        display: flex;
+        align-items: center;
+        padding: 0 60px;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #6c4540d6;
+    }
+
+    .container-caixas {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #banner {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .banner-conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lista {
+        flex-direction: row;
+    }
+
+
+    /* Rodapé */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-primeira {
+        text-align: center;
+        flex: 1;
+    }
+
+    .footer-info {
+        text-align: left;
+        flex: 1;
+        padding-left: 40px;
+    }
+
+    .footer-links {
+        text-align: left;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 40px;
+    }
+}
