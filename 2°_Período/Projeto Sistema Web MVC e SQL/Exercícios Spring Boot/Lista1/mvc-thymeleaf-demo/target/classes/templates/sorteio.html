@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteio de Números</title>
+</head>
+<body>
+    <h1>Sorteio de 6 números</h1>
+
+    <p>
+        <button onclick="sortearNumeros()">Sortear</button>
+    </p>
+
+    <h2>Números sorteados:</h2>
+    <ul id="resultado"></ul>
+
+    <script>
+        function sortearNumeros() {
+            fetch('/sortear')
+                .then(response => response.json())
+                .then(numeros => {
+                    const lista = document.getElementById('resultado');
+                    lista.innerHTML = '';
+                    numeros.forEach(numero => {
+                        const item = document.createElement('li');
+                        item.textContent = numero;
+                        lista.appendChild(item);
+                    });
+                });
+        }
+    </script>
+</body>
+</html>
