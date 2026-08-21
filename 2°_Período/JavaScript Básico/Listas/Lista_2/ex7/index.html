@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../index.html">Voltar ao menu</a>
+    <script>
+        texto = prompt("Digite um texto: ");
+        letra = prompt("Digite uma letra: ");
+
+        textos = texto.split(" ");
+        resultado = "";
+
+    for (i = 0; i < textos.length; i++) {
+            palavraAtual = textos[i];
+
+            letraDaPalavra = palavraAtual[0].toLowerCase();
+            letraBuscada = letra.toLowerCase();
+
+            if (letraDaPalavra == letraBuscada) {
+                resultado = resultado + palavraAtual + " ";
+            }
+        }
+        document.write("<p>" + resultado + "</p>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT – STRINGS Lista 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        header h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+
+        /* Container do Menu */
+        .menu-container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card-link {
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #2c3e50;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-link:hover {
+            transform: translateY(-5px);
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #3498db;
+            box-shadow: 0 10px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        .card-link span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            color: #7f8c8d;
+            transition: color 0.3s ease;
+        }
+
+        .card-link:hover span {
+            color: #e0f2fe;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JAVASCRIPT – STRINGS Lista 2</h1>
+    </header>
+
+    <main class="menu-container">
+        <!-- Links para as pastas de cada exercício seguindo o seu padrão -->
+        <a href="ex1/index.html" class="card-link"><span>Exercício</span>01</a>
+        <a href="ex2/index.html" class="card-link"><span>Exercício</span>02</a>
+        <a href="ex3/index.html" class="card-link"><span>Exercício</span>03</a>
+        <a href="ex4/index.html" class="card-link"><span>Exercício</span>04</a>
+        <a href="ex5/index.html" class="card-link"><span>Exercício</span>05</a>
+        <a href="ex6/index.html" class="card-link"><span>Exercício</span>06</a>
+        <a href="ex7/index.html" class="card-link"><span>Exercício</span>07</a>
+        <a href="ex8/index.html" class="card-link"><span>Exercício</span>08</a>
+        <a href="ex9/index.html" class="card-link"><span>Exercício</span>09</a>
+        <a href="ex10/index.html" class="card-link"><span>Exercício</span>10</a>
+        <a href="ex11/index.html" class="card-link"><span>Exercício</span>11</a>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        primeiroNome = prompt("Qual o seu primeiro nome?");
+        segundoNome = prompt("Qual o seu segundo nome?");
+        n = prompt("Quantas vezes deseja que o seu nome se repita? ");
+        cor = prompt("Qual cor deseja para o seu nome? ");
+        contador = 2;
+        for (i = 1; i <= n; i++){
+            if(i == contador){
+                document.write('<p style="color: ' + cor + ';">' + i + ' - ' + primeiroNome + ' ' + segundoNome + '</p>');
+                contador += 2;
+            }else{
+                document.write('<p style="color: black;">' + i + ' - ' + primeiroNome + ' ' + segundoNome + '</p>');
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <a href="../index.html">Voltar ao menu</a>
+</body>
+
+</html>

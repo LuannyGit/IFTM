@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Bases Numéricas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let numero = parseInt(prompt("Digite um número inteiro positivo (maior ou igual a 2):"));
+
+        if (isNaN(numero) || numero < 2) {
+            alert("Número inválido! Por favor, informe um valor inteiro maior ou igual a 2.");
+        } else {
+            let tabela = "<table>";
+            tabela += "<thead>";
+            tabela += "<tr>";
+            tabela += "<th>Base decimal</th>";
+            tabela += "<th>Base binária</th>";
+            tabela += "<th>Base hexadecimal</th>";
+            tabela += "</tr>";
+            tabela += "</thead>";
+            tabela += "<tbody>";
+
+            for (let i = 0; i <= numero; i++) {
+                let binario = i.toString(2);
+                let hexadecimal = i.toString(16).toUpperCase();
+
+                tabela += "<tr>";
+                tabela += "<td>" + i + "</td>";
+                tabela += "<td>" + binario + "</td>";
+                tabela += "<td>" + hexadecimal + "</td>";
+                tabela += "</tr>";
+            }
+
+            tabela += "</tbody>";
+            tabela += "</table>";
+
+            document.write(tabela);
+        }
+    </script>
+
+</body>
+</html>

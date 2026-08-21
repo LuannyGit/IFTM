@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - Agrupar palavras por letra</title>
+</head>
+<body>
+    <a href="../index.html">Voltar ao menu</a>
+
+    <script>
+        let texto = prompt("Digite um texto: ");
+
+        let palavras = texto.split(" ");
+
+        let grupos = {};
+
+        for (let i = 0; i < palavras.length; i++) {
+            let palavraAtual = palavras[i];
+            let letraInicial = palavraAtual[0].toLowerCase();
+
+            if (!grupos[letraInicial]) {
+                grupos[letraInicial] = [];
+            }
+
+            grupos[letraInicial].push(palavraAtual);
+        }
+
+        let letras = [];
+
+        for (let chave in grupos) {
+            letras.push(chave);
+        }
+        letras.sort();
+
+        let saida = "";
+
+        for (let i = 0; i < letras.length; i++) {
+            let letra = letras[i];
+
+            saida += "<p>Palavras iniciadas com a letra " + letra + ":</p>";
+            saida += "<ul>";
+
+            for (let j = 0; j < grupos[letra].length; j++) {
+                saida += "<li>" + grupos[letra][j] + "</li>";
+            }
+
+            saida += "</ul>";
+        }
+
+        document.write(saida);
+    </script>
+</body>
+</html>

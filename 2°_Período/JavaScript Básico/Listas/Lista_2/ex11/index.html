@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - Substituição de Palavras</title>
+    <style>
+        .box {
+            /* border: 1px solid #777; */
+            padding: 15px;
+            width: fit-content;
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+        .vermelho {
+            color: red;
+            font-weight: bold;
+        }
+        .verde {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let texto = prompt("Informe um texto:");
+        let palavraBusca = prompt("Informe a primeira palavra:");
+        let palavraSubstituta = prompt("Informe a segunda palavra:");
+
+        let palavras = texto.split(" ");
+        let textoFinal = "";
+        let textoOriginalDestacado = "";
+
+        for (let i = 0; i < palavras.length; i++) {
+            let palavraAtual = palavras[i];
+
+            if (palavraAtual === palavraBusca) {
+                textoOriginalDestacado += "<span class='vermelho'>" + palavraAtual + "</span>";
+                textoFinal += "<span class='verde'>" + palavraSubstituta + "</span>";
+            } else {
+                textoOriginalDestacado += palavraAtual;
+                textoFinal += palavraAtual;
+            }
+
+            if (i < palavras.length - 1) {
+                textoOriginalDestacado += " ";
+                textoFinal += " ";
+            }
+        }
+
+        let textoAlert = "";
+        for (let i = 0; i < palavras.length; i++) {
+            if (palavras[i] === palavraBusca) {
+                textoAlert += palavraSubstituta;
+            } else {
+                textoAlert += palavras[i];
+            }
+            if (i < palavras.length - 1) {
+                textoAlert += " ";
+            }
+        }
+        alert(textoAlert);
+        let saida = "<div class='box'>";
+        saida += "<p><strong>Informe um texto:</strong><br>" + textoOriginalDestacado + "</p>";
+        saida += "<p><strong>Informe a primeira palavra:</strong><br><span class='vermelho'>" + palavraBusca + "</span></p>";
+        saida += "<p><strong>Informe a segunda palavra:</strong><br><span class='verde'>" + palavraSubstituta + "</span></p>";
+        saida += "<p><strong>Mensagem final:</strong><br>" + textoFinal + "</p>";
+        saida += "</div>";
+        document.write(saida);
+    </script>
+
+</body>
+</html>
