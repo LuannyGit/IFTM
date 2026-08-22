@@ -9,9 +9,10 @@
     <a href="../index.html">Voltar ao menu</a>
     <script>
         nome = prompt("Digite seu nome completo: ");
-        nomes = nome.split(" ");
-
-        alert(nomes[0].toUpperCase()+ " " + nomes[1].toLowerCase());
+        nomes = nome.toLowerCase().split(" ");
+        nomes[0] = nomes[0].toUpperCase();
+        nomes = nomes.join(" ")
+        alert(nomes);
     </script>
 </body>
 </html>
