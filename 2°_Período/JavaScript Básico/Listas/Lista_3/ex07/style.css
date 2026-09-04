@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.formulario {
+    margin: 120px auto 0 auto;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h1 {
+    color: blue;
+    font-family: Verdana, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+.label {
+    text-align: right;
+    padding-right: 5px;
+}
+
+input {
+    width: 230px;
+    height: 18px;
+    box-sizing: border-box;
+}
+
+.observacao {
+    color: red;
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.botoes {
+    text-align: center;
+    padding-top: 15px;
+}
+
+button {
+    margin: 0 2px;
+}

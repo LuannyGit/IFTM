@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acesso ao Sistema</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <table class="formulario">
+        <tr>
+            <td colspan="3">
+                <h1>Acesso ao Sistema</h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <label for="login">Login</label>
+            </td>
+
+            <td>
+                <input type="text" id="login">
+            </td>
+
+            <td></td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                <label for="senha">Senha</label>
+            </td>
+
+            <td>
+                <input type="password" id="senha" maxlength="8" style="width:  140px;">
+                <span class="observacao">(max. 8 caracteres)</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label">
+                <label for="confirmarSenha">Confirmar Senha</label>
+            </td>
+
+            <td>
+                <input type="password" id="confirmarSenha" maxlength="8" style="width: 140px;">
+                <span class="observacao">(max. 8 caracteres)</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="8" class="botoes">
+                <button type="button" id="btnEntrar">Entrar</button>
+                <button type="button" id="btnLimpar">Limpar</button>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <a href="../index.html">Voltar ao menu</a>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
