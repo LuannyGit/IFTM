@@ -1,0 +1,5 @@
+CREATE TABLE pet (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    raca VARCHAR(100)
+);

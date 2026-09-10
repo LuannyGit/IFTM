@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Clínica Veterinária</title>
+    <meta charset="UTF-8">
+    <!-- Aqui conectamos nosso arquivo CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🐶 Clínica Veterinária</h1>
+
+        <form action="/cadastrar" method="post">
+            <div class="campo">
+                <label>Nome do Pet:</label>
+                <input type="text" name="nome" placeholder="Ex: Rex" required>
+            </div>
+            
+            <div class="campo">
+                <label>Raça:</label>
+                <input type="text" name="raca" placeholder="Ex: Poodle" required>
+            </div>
+            
+            <button type="submit">+ Cadastrar</button>
+        </form>
+
+        <h2>Pacientes Cadastrados</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Raça</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop para preencher as linhas da tabela -->
+                <tr th:each="pet : ${listaPets}">
+                    <td th:text="${pet.id}">1</td>
+                    <td th:text="${pet.nome}">Nome</td>
+                    <td th:text="${pet.raca}">Raça</td>
+                    <td>
+                        <!-- O Thymeleaf monta a URL com o ID correto do Pet para podermos excluir -->
+                        <a th:href="@{/deletar/{id}(id=${pet.id})}" class="btn-deletar">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
