@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Exercícios</title>
+    <style>
+        /* Estilização Geral */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        /* Estilização dos Links */
+        .menu-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .menu-link {
+            display: block;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .menu-link:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .menu-link:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Menu de Exercícios</h1>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="./ex01/index.html" class="menu-link">Exercício 1</a></li>
+                <li><a href="./ex02/index.html" class="menu-link">Exercício 2</a></li>
+                <li><a href="./ex03/index.html" class="menu-link">Exercício 3</a></li>
+                <li><a href="./ex04/index.html" class="menu-link">Exercício 4</a></li>
+                <li><a href="./ex05/index.html" class="menu-link">Exercício 5</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>
